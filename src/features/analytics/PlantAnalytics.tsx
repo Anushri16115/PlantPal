@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import { usePlants } from '../../context/PlantContext.js';
-import './PlantAnalytics.css';
 
 interface PlantStats {
   totalPlants: number;
