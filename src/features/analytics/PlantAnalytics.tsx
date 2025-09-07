@@ -25,8 +25,8 @@ interface WateringData {
 export function PlantAnalytics() {
   const { plants } = usePlants();
   const [stats, setStats] = useState<PlantStats | null>(null);
-  const [selectedTimeframe, setSelectedTimeframe] = useState<'week' | 'month' | 'year'>('month');
-  const [selectedPlant, setSelectedPlant] = useState<string>('all');
+  const [selectedTimeframe] = useState<'week' | 'month' | 'year'>('month');
+  const [selectedPlant] = useState<string>('all');
 
   useEffect(() => {
     calculateStats();
@@ -196,7 +196,7 @@ export function PlantAnalytics() {
       <div className="analytics-controls">
         <select
           value={selectedTimeframe}
-          onChange={(e) => setSelectedTimeframe(e.target.value as 'week' | 'month' | 'year')}
+          onChange={() => {}}
           className="timeframe-select"
         >
           <option value="week">Last Week</option>
@@ -206,7 +206,7 @@ export function PlantAnalytics() {
 
         <select
           value={selectedPlant}
-          onChange={(e) => setSelectedPlant(e.target.value)}
+          onChange={() => {}}
           className="plant-select"
         >
           <option value="all">All Plants</option>
