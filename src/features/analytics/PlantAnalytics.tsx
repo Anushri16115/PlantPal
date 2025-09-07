@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import { usePlants } from '../../context/PlantContext.js';
-import type { Plant, GrowthLog } from '../../types/plant.d.ts';
 import './PlantAnalytics.css';
 
 interface PlantStats {
@@ -172,7 +171,6 @@ export function PlantAnalytics() {
       .slice(0, 5); // Top 5 species
   };
 
-  const filteredPlants = selectedPlant === 'all' ? plants : plants.filter(p => p.id === selectedPlant);
   const growthData = getGrowthData();
   const wateringData = getWateringData();
   const healthDistribution = getHealthDistribution();

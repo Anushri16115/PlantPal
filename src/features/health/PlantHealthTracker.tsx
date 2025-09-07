@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { usePlants } from '../../context/PlantContext.js';
 import type { Plant } from '../../types/plant.d.ts';
 import './PlantHealthTracker.css';
